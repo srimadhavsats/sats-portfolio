@@ -63,14 +63,17 @@ Remaining repo polish: add the URL + a description and topics (`portfolio`, `web
 ## 5. Backlog (in priority order)
 
 1. ~~Deploy~~ ✅ Done 2026-07-19 — live, single-branch (`main`/root). Test on a phone.
-2. ~~README~~ ✅ Done. Still to do: repo description/topics in the About sidebar.
-3. **OG image** (`og:image`) — 1200×630 dark card with name + "crypto since 2012" for link previews
-   on X/Telegram/LinkedIn.
+2. ~~README + repo About~~ ✅ Done — description, homepage and topics set via API 2026-07-20.
+3. ~~OG image~~ ✅ Done 2026-07-20 — `og-image.png` (1200×630) + og:image/twitter:card meta tags.
+   Regenerate: edit the card HTML (scratchpad `og.html` pattern), screenshot via headless Edge
+   `--window-size=1200,630 --screenshot`.
 4. ~~Add socials~~ ✅ Done — X @srimadhav_btc + @the2012crypto, LinkedIn, plus on-chain identity section
    (6 crypto domains + OpenSea link). **Do not add**: Telegram handle or phone (Sri's explicit request).
    NFT live-fetch from OpenSea was considered and deliberately skipped: the API requires a key and a
    client-side fetch would fail unpredictably — a static OpenSea profile link is robust.
-5. **Resume link on site** — optional: host a phone-free PDF version of the CV and link it from the hero.
+5. ~~Resume link on site~~ ✅ Done 2026-07-20 — `cv/Sri_Madhav_CV.pdf` (public, **phone-free**; email +
+   LinkedIn + GitHub only) linked from the hero "Download CV" button. Regenerate from
+   `handoff/Sri_Madhav_CV_Master.html` by stripping the phone span, then headless-Edge print-to-pdf.
 6. **Custom domain** — e.g. `srimadhav.dev` or a `.eth`-linked domain (fits the brand). Optional.
 7. **Blog/writing section** — Sri wants to build a crypto-education brand eventually; the site's `sec-head`
    pattern extends naturally to a "Writing" section. Keep for v2.
