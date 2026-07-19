@@ -43,24 +43,26 @@
 7. **Contact** — email + GitHub. **Deliberately no phone number** on the public site (spam/scraper hygiene);
    phone lives only on the CV, which is sent directly to people.
 
-## 4. How to deploy (5 minutes)
+## 4. Deployment (already live — single-branch setup)
+
+**Live at https://srimadhavsats.github.io/sats-portfolio/ — served from `main` branch, root folder.**
+GitHub Pages source was switched from the initial `gh-pages` branch to `main`/root on 2026-07-19, and
+`gh-pages` was deleted. `main` is now the only branch.
+
+To update the site, just edit and push — Pages rebuilds automatically:
 
 ```bash
-git add index.html PROJECT_HANDOFF.md .gitignore
-git commit -m "Portfolio v1 prototype"
-git push origin main
+git add index.html
+git commit -m "…"
+git push origin main   # site refreshes in ~1 minute
 ```
 
-Then on GitHub: **Settings → Pages → Build and deployment → Source: "Deploy from a branch" →
-Branch: `main`, folder `/ (root)` → Save.** Site goes live at
-`https://srimadhavsats.github.io/sats-portfolio/` within ~1 minute.
-
-Afterwards, add the URL to the repo's About sidebar + add a description and topics
-(`portfolio`, `web3`, `blockchain`, `bitcoin`) so the repo itself looks finished.
+Remaining repo polish: add the URL + a description and topics (`portfolio`, `web3`, `blockchain`,
+`bitcoin`) in the repo's About sidebar so the repo itself looks finished.
 
 ## 5. Backlog (in priority order)
 
-1. ~~Deploy~~ ✅ Done 2026-07-19 — live at srimadhavsats.github.io/sats-portfolio. Test on a phone.
+1. ~~Deploy~~ ✅ Done 2026-07-19 — live, single-branch (`main`/root). Test on a phone.
 2. ~~README~~ ✅ Done. Still to do: repo description/topics in the About sidebar.
 3. **OG image** (`og:image`) — 1200×630 dark card with name + "crypto since 2012" for link previews
    on X/Telegram/LinkedIn.
