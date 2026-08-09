@@ -12,7 +12,7 @@ identity (ENS & friends), skills and experience.
 
 | Project | What it is | Stack |
 |---|---|---|
-| [Sats Hack Flow](https://github.com/srimadhavsats/sats-hack-flow) | Smart-contract hack & forensic visualizer + live on-chain tracer | React, Vite, JSON-RPC, vis-network |
+| [Sats Hack Flow](https://srimadhavsats.github.io/sats-hack-flow/) | Smart-contract hack & forensic visualizer + live on-chain tracer | React, Vite, JSON-RPC, vis-network |
 | [Sats Swap](https://github.com/srimadhavsats/sats-swap) | Minimal AMM DEX (x·y=k) | Solidity 0.8.20, Foundry |
 | [Eagle Eye](https://srimadhavsats.github.io/eagle-eye/) | Macro crypto intelligence hub | Python, FastAPI, React, Recharts |
 | [SATS Trading Monitor](https://sats-trading-monitor.vercel.app) | High-frequency market telemetry | Python asyncio, FastAPI WS, React |
