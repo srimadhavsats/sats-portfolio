@@ -1139,18 +1139,40 @@
     window.addEventListener("resize", revealInView, { passive: true });
     revealInView();
 
-    // live BTC price (graceful fail)
-    fetch("https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd")
-      .then((r) => r.json())
-      .then((d) => {
-        const p = d?.bitcoin?.usd;
-        if (p) {
-          const t = document.getElementById("btcTicker");
-          t.textContent = "₿ $" + p.toLocaleString("en-US");
-          t.classList.add("live");
+    // Live BTC price, with fallbacks.
+    // CoinGecko's keyless endpoint started returning 403 (and no CORS header), which
+    // silently hid the ticker, so we no longer depend on a single source. Each of these
+    // is keyless and CORS-enabled; we try them in order until one returns a sane price.
+    // (Binance is deliberately omitted — it is geo-blocked for some visitors.)
+    const BTC_SOURCES = [
+      { name: "mempool.space", url: "https://mempool.space/api/v1/prices", pick: (d) => d?.USD },
+      { name: "Coinbase", url: "https://api.coinbase.com/v2/prices/BTC-USD/spot", pick: (d) => parseFloat(d?.data?.amount) },
+      { name: "Kraken", url: "https://api.kraken.com/0/public/Ticker?pair=XBTUSD", pick: (d) => parseFloat(d?.result?.XXBTZUSD?.c?.[0]) },
+      { name: "Blockchain.com", url: "https://blockchain.info/ticker", pick: (d) => d?.USD?.last }
+    ];
+
+    async function updateBtcTicker() {
+      const el = document.getElementById("btcTicker");
+      if (!el) return;
+      for (const src of BTC_SOURCES) {
+        try {
+          const res = await fetch(src.url, { cache: "no-store" });
+          if (!res.ok) continue;
+          const price = src.pick(await res.json());
+          if (!Number.isFinite(price) || price <= 0) continue;
+          el.textContent = "₿ $" + Math.round(price).toLocaleString("en-US");
+          el.title = "BTC/USD via " + src.name + " · updated " + new Date().toLocaleTimeString();
+          el.classList.add("live");
+          return;
+        } catch (e) {
+          /* source unavailable — fall through to the next one */
         }
-      })
-      .catch(() => { });
+      }
+      // Every source failed: leave the ticker hidden rather than show a broken value.
+    }
+
+    updateBtcTicker();
+    setInterval(updateBtcTicker, 60000);
   </script>
   <script data-goatcounter="https://srimadhav.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
