@@ -4,10 +4,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sri Madhav — Blockchain · Web3 · Crypto since 2012</title>
+  <title>Sri Madhav · Blockchain, Web3 and Crypto since 2012</title>
   <meta name="description"
-    content="Sri Madhav — Web3-native builder and analyst. 14 years deep in Bitcoin and the decentralized economy. Solidity, node infrastructure, market analysis, and shipped crypto products." />
-  <meta property="og:title" content="Sri Madhav — Blockchain · Web3 · Crypto since 2012" />
+    content="Sri Madhav, a Web3-native builder and analyst. 14 years deep in Bitcoin and the decentralized economy. Solidity, node infrastructure, market analysis and shipped crypto products." />
+  <meta property="og:title" content="Sri Madhav · Blockchain, Web3 and Crypto since 2012" />
   <meta property="og:description"
     content="Web3-native builder & analyst. Solidity DEX, quant analytics platforms, node infrastructure, and 14 years of hands-on crypto experience." />
   <meta property="og:type" content="website" />
@@ -16,7 +16,7 @@
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Sri Madhav — Blockchain · Web3 · Crypto since 2012" />
+  <meta name="twitter:title" content="Sri Madhav · Blockchain, Web3 and Crypto since 2012" />
   <meta name="twitter:description"
     content="Web3-native builder & analyst. Solidity DEX, quant analytics platforms, node infrastructure, and 14 years of hands-on crypto experience." />
   <meta name="twitter:image" content="https://srimadhavsats.github.io/sats-portfolio/og-image.png" />
@@ -709,7 +709,30 @@
       color: var(--orange);
     }
 
-    /* reveal animation — hidden state only when JS is running (html.js-reveal) */
+    /* inline call-to-action link, styled as a pill so it clearly reads as clickable */
+    .btn-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--mono);
+      font-size: 12.5px;
+      font-weight: 500;
+      color: var(--orange);
+      text-decoration: none;
+      border: 1px solid rgba(247, 147, 26, 0.4);
+      background: var(--orange-soft);
+      padding: 7px 14px;
+      border-radius: 8px;
+      transition: background 0.2s, border-color 0.2s, transform 0.15s;
+    }
+
+    .btn-link:hover {
+      background: rgba(247, 147, 26, 0.18);
+      border-color: var(--orange);
+      transform: translateY(-1px);
+    }
+
+    /* reveal animation: hidden state only when JS is running (html.js-reveal) */
     .js-reveal .reveal {
       opacity: 0;
       transform: translateY(24px);
@@ -737,7 +760,7 @@
         <a href="#skills">Skills</a>
         <a href="#experience">Experience</a>
         <a href="#contact" class="nav-cta">Contact</a>
-        <span class="btc-ticker" id="btcTicker">₿ —</span>
+        <span class="btc-ticker" id="btcTicker">₿ ...</span>
       </div>
     </div>
   </nav>
@@ -748,9 +771,9 @@
         <span class="eyebrow">// blockchain · web3 · decentralization</span>
         <h1>In crypto since <span class="accent">2012</span>.<br />Building in it now.</h1>
         <p class="hero-sub">
-          I'm <strong>Sri Madhav</strong> — a Web3-native builder and analyst. I've lived through
+          I'm <strong>Sri Madhav</strong>, a Web3-native builder and analyst. I've lived through
           every cycle since the early faucet days: mining, self-custody, DeFi, NFTs, airdrops,
-          node infrastructure, and market microstructure. Now I ship products —
+          node infrastructure and market microstructure. These days I ship products,
           from a Solidity AMM DEX to real-time quant analytics platforms.
         </p>
         <div class="cta-row">
@@ -765,7 +788,7 @@
             <div class="lbl">Years in crypto</div>
           </div>
           <div class="stat">
-            <div class="num">5</div>
+            <div class="num">6</div>
             <div class="lbl">Shipped projects</div>
           </div>
           <div class="stat">
@@ -787,7 +810,7 @@
         </div>
         <div class="term-body">
           <div><span class="prompt">$</span> <span class="cmd">whoami</span></div>
-          <div class="out">sri_madhav — btc-first, <span class="hl">decentralization maxi</span></div>
+          <div class="out">sri_madhav · btc-first, <span class="hl">decentralization maxi</span></div>
           <div><span class="prompt">$</span> <span class="cmd">uptime --crypto</span></div>
           <div class="out">up <span class="hl" id="termYears">14 years</span> since first BTC txn (2012)</div>
           <div><span class="prompt">$</span> <span class="cmd">ls ~/stack</span></div>
@@ -808,7 +831,7 @@
     <div class="ethos-grid">
       <div class="ethos-card reveal">
         <span class="icon">🟠</span>
-        <h3>Bitcoin first — fluent everywhere</h3>
+        <h3>Bitcoin first, fluent everywhere</h3>
         <p>BTC enthusiast since 2012, but hands-on across the whole landscape: EVM chains, Solana, Cosmos, Sui, NEAR and
           more. Cycles come and go; conviction stays.</p>
       </div>
@@ -821,7 +844,7 @@
       <div class="ethos-card reveal">
         <span class="icon">🔑</span>
         <h3>Self-custody &amp; verification</h3>
-        <p>Learned CEX risk the hard way in 2016 — been non-custodial ever since. Seed-phrase discipline, wallet
+        <p>Learned CEX risk the hard way in 2016. Non-custodial ever since. Seed-phrase discipline, wallet
           architecture, and "don't trust, verify" as a way of life.</p>
       </div>
     </div>
@@ -831,7 +854,7 @@
     <div class="sec-head reveal">
       <span class="tag">// on-chain identity</span>
       <h2>One name, every chain</h2>
-      <p>Decentralized identity claimed across ecosystems — collected in the era when crypto domains were the new .com.
+      <p>Decentralized identity claimed across ecosystems, collected back when crypto domains felt like the new .com.
       </p>
     </div>
     <div class="skill-card reveal">
@@ -843,12 +866,12 @@
         <span class="chip">srimadhav.key <span style="color:var(--text-faint)">· Polygon</span></span>
         <span class="chip">srimadhav.algo <span style="color:var(--text-faint)">· Algorand</span></span>
       </div>
-      <p style="font-size: 14px; color: var(--text-dim);">
-        Also an NFT collector since the OpenSea early days —
-        <a href="https://opensea.io/srimadhav.eth" target="_blank" rel="noopener"
-          style="color: var(--orange); text-decoration: none;">browse the collection ↗</a>
-        &nbsp;·&nbsp; Lightning Network user for real payments, not just theory.
+      <p style="font-size: 14px; color: var(--text-dim); margin-bottom: 14px;">
+        Collecting NFTs since the early OpenSea days, and using Lightning for real payments rather than theory.
       </p>
+      <a class="btn-link" href="https://opensea.io/srimadhav.eth" target="_blank" rel="noopener">
+        View NFT collection on OpenSea ↗
+      </a>
     </div>
   </section>
 
@@ -856,7 +879,7 @@
     <div class="sec-head reveal">
       <span class="tag">// journey</span>
       <h2>14 years down the rabbit hole</h2>
-      <p>Not a tourist. I was here before the ETFs, before DeFi summer, before the word "Web3" existed — and I've
+      <p>Not a tourist. I was here before the ETFs, before DeFi summer, before the word "Web3" existed, and I've
         touched nearly everything the space has produced.</p>
     </div>
     <div class="timeline">
@@ -876,20 +899,20 @@
       <div class="t-item reveal">
         <span class="t-year">2014–2016</span>
         <h3>Multi-coin &amp; self-custody era</h3>
-        <p>Accumulated and traded BTC, Litecoin, XRP and Dogecoin. Learned wallet architecture deeply — Electrum, Loaf,
-          Toast, GateHub — and moved to non-custodial storage. Used LocalBitcoins, Paxful and ShapeShift when "just swap
+        <p>Accumulated and traded BTC, Litecoin, XRP and Dogecoin. Learned wallet architecture deeply (Electrum, Loaf,
+          Toast, GateHub) and moved to non-custodial storage. Used LocalBitcoins, Paxful and ShapeShift when "just swap
           it" wasn't a thing yet.</p>
       </div>
       <div class="t-item reveal">
         <span class="t-year">2017</span>
-        <h3>The first mania — and its lessons</h3>
-        <p>Lived through the ICO bubble and fork wars (BTC/BCH). Experienced CEX counterparty risk firsthand — a lesson
+        <h3>The first mania, and its lessons</h3>
+        <p>Lived through the ICO bubble and fork wars (BTC/BCH). Experienced CEX counterparty risk firsthand, a lesson
           that turned into a permanent self-custody discipline.</p>
       </div>
       <div class="t-item reveal">
         <span class="t-year">2020</span>
         <h3>The deep study</h3>
-        <p>Re-entered as institutions arrived (Saylor, Musk era) and used lockdowns to study Bitcoin exhaustively —
+        <p>Re-entered as institutions arrived (Saylor, Musk era) and used lockdowns to study Bitcoin exhaustively:
           monetary theory, cryptography, consensus, and everything in between. Interest became obsession.</p>
       </div>
       <div class="t-item reveal">
@@ -923,6 +946,20 @@
       <p>Open source, live, and built end-to-end: smart contracts, backend pipelines, and frontends.</p>
     </div>
     <div class="proj-grid">
+      <div class="proj-card reveal">
+        <div class="proj-top">
+          <h3>Kennel</h3>
+          <div class="proj-links">
+            <a href="https://kennel-launchpad.netlify.app/" target="_blank" rel="noopener">live ↗</a>
+          </div>
+        </div>
+        <p>A fair-launch meme token launchpad built on <strong>DogeOS</strong>. Launch a token in one transaction with
+          a fixed 1B supply, no presale and no creator allocation. Tokens raise on a bonding curve, then graduate to
+          the DogePark with the LP burned. Includes a live king-of-the-hill board and graduation tracking.</p>
+        <div class="chip-row">
+          <span class="chip hot">DogeOS</span><span class="chip">Bonding curve</span><span class="chip">Fair launch</span><span class="chip">LP burn</span><span class="chip">Web3 dApp</span>
+        </div>
+      </div>
       <div class="proj-card reveal">
         <div class="proj-top">
           <h3>Sats Hack Flow</h3>
@@ -979,7 +1016,7 @@
           </div>
         </div>
         <p>High-frequency market telemetry pipeline. Async ingestion of exchange order-flow, WebSocket fan-out to
-          clients, anomaly detection, volatility metrics — with origin-verification hardening against WebSocket
+          clients, anomaly detection, volatility metrics, with origin-verification hardening against WebSocket
           hijacking.</p>
         <div class="chip-row">
           <span class="chip hot">Python asyncio</span><span class="chip">FastAPI WS</span><span
@@ -1059,15 +1096,15 @@
     <div class="xp-card reveal">
       <div class="xp-head">
         <h3>Web3 Technical Infrastructure &amp; Community Operations</h3>
-        <span class="period">2012 — Present</span>
+        <span class="period">2012 – Present</span>
       </div>
-      <div class="xp-role">Infrastructure Operator · Community Admin · Independent Researcher — Remote</div>
+      <div class="xp-role">Infrastructure Operator · Community Admin · Independent Researcher · Remote</div>
       <ul>
         <li>Deployed and maintained validator/verifier nodes across VPS providers (Contabo, AWS, Oracle) with
           terminal-first workflows.</li>
         <li>Diagnosed RPC latency and node desync issues by parsing raw JSON-RPC payloads (eth_blockNumber, balanceOf)
           from the command line.</li>
-        <li>Admin of Telegram node-running and Discord Bitcoin communities — debugging users' bridging failures, stuck
+        <li>Admin of Telegram node-running and Discord Bitcoin communities, debugging users' bridging failures, stuck
           transactions, and gas configuration.</li>
         <li>Conducted multi-chain transaction forensics, including sweep-pattern analysis on institutional hot wallets
           via historical BSC block states.</li>
@@ -1077,13 +1114,13 @@
     <div class="xp-card reveal">
       <div class="xp-head">
         <h3>GlobalLogic <span style="color:var(--text-faint); font-weight:400;">(client: Google)</span></h3>
-        <span class="period">May 2019 — Aug 2024</span>
+        <span class="period">May 2019 – Aug 2024</span>
       </div>
-      <div class="xp-role">Quality Analyst · Subject Matter Expert · Senior Analyst — Gurugram, India</div>
+      <div class="xp-role">Quality Analyst · Subject Matter Expert · Senior Analyst · Gurugram, India</div>
       <ul>
         <li>Ran QA operations and edge-case verification loops that improved 50+ production AI/ML models across Google
           hardware lines (Nest Cam, Nest Hub, Fitbit, Pixel).</li>
-        <li>Served as the liaison between Google's requirements and internal engineering/QA teams — translating specs,
+        <li>Served as the liaison between Google's requirements and internal engineering/QA teams, translating specs,
           resolving ambiguity, unblocking delivery.</li>
         <li>Designed onboarding blueprints and personally trained 400+ analysts, team leads and QA managers.</li>
         <li>Raised team quality metrics from a 95% baseline to a sustained 98%, helping secure multi-year project
@@ -1097,7 +1134,7 @@
   <section id="contact" class="wrap">
     <div class="contact-card reveal">
       <h2>Let's build the decentralized future.</h2>
-      <p>Open to Web3 roles — smart contracts, technical analysis/triage, node infrastructure, research, community. If
+      <p>Open to Web3 roles in on-chain analysis, technical support and triage, node infrastructure, QA or research. If
         you need someone who has genuinely lived this space for 14 years, let's talk.</p>
       <div class="contact-links">
         <a class="btn btn-primary" href="mailto:srimadhav47@gmail.com">srimadhav47@gmail.com</a>
@@ -1128,7 +1165,7 @@
     document.getElementById("termYears").textContent = years + " years";
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    // scroll reveal (scroll-listener based — works in every browser; no-JS falls back to fully visible)
+    // scroll reveal (scroll-listener based, works in every browser; no-JS falls back to fully visible)
     document.documentElement.classList.add("js-reveal");
     function revealInView() {
       document.querySelectorAll(".reveal:not(.in)").forEach((el) => {
@@ -1143,7 +1180,7 @@
     // CoinGecko's keyless endpoint started returning 403 (and no CORS header), which
     // silently hid the ticker, so we no longer depend on a single source. Each of these
     // is keyless and CORS-enabled; we try them in order until one returns a sane price.
-    // (Binance is deliberately omitted — it is geo-blocked for some visitors.)
+    // (Binance is deliberately omitted: it is geo-blocked for some visitors.)
     const BTC_SOURCES = [
       { name: "mempool.space", url: "https://mempool.space/api/v1/prices", pick: (d) => d?.USD },
       { name: "Coinbase", url: "https://api.coinbase.com/v2/prices/BTC-USD/spot", pick: (d) => parseFloat(d?.data?.amount) },
@@ -1165,7 +1202,7 @@
           el.classList.add("live");
           return;
         } catch (e) {
-          /* source unavailable — fall through to the next one */
+          /* source unavailable, fall through to the next one */
         }
       }
       // Every source failed: leave the ticker hidden rather than show a broken value.
